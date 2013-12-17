@@ -1,0 +1,161 @@
+.ui-panel-inner {
+	padding: 0px;
+}
+
+.ui-content {
+	padding: 0px;
+}
+
+.ui-content .ui-listview-inset,.ui-panel-inner .ui-listview-inset {
+	margin: 0px;
+}
+
+.ui-corner-all {
+	-webkit-border-radius: 0em;
+	border-radius: 0em;
+}
+
+.empty {
+	height: 500px;
+	text-align: center;
+	text-align: middle;
+	margin-top: 50px;
+	color: rgb(107, 100, 100);
+}
+
+.ui-shadow {
+	-moz-box-shadow: 0 0px 0px rgba(0, 0, 0, .2);
+	-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, .2);
+	box-shadow: 0 0px 0px rgba(0, 0, 0, .2);
+}
+
+.attch {
+	margin-top: 10px;
+}
+
+.attch span {
+	float: left;
+}
+
+.attch ul {
+	list-style: none;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.attch li {
+	float: left;
+	padding-right: 15px;
+}
+
+.attch a {
+	text-decoration: none;
+}
+
+.controlgroup {
+	display: none;
+}
+
+.ui-controlgroup-controls {
+	margin-left: 30px;
+}
+
+#J-content {
+	height: 322px;
+	z-index: 1;
+	width: 100%;
+	overflow: scroll;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+
+#scroll {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	width: 100%;
+	padding: 0;
+	-webkit-backface-visibility:hidden;  
+	-webkit-transform-style:preserve-3d; 
+}
+
+#J-content li{
+	-webkit-transform: translateZ(0);
+} 
+#pullUp,#pullDown {
+	display: none;
+}
+
+#J_loadMore div {
+	margin: 0;
+}
+
+#J_loadMore {
+	display: none;
+	-webkit-transform: translateZ(0);
+}
+
+#J_loadMore .ui-btn-inner {
+	padding: 1em 20px;
+}
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown,#pullUp {
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+	font-size: 14px;
+	color: #888;
+}
+
+#pullDown .pullDownIcon,#pullUp .pullUpIcon {
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size: 40px 80px;
+	background-size: 40px 80px;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 250ms;
+}
+
+#pullDown .pullDownIcon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pullUp .pullUpIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon,#pullUp.loading .pullUpIcon {
+	background-position: 0 100%;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-webkit-transition-duration: 0ms;
+	-webkit-animation-name: loading;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@
+-webkit-keyframes loading {from { -webkit-transform:rotate(0deg)translateZ(0);
+	
+}
+
+to {
+	-webkit-transform: rotate(360deg) translateZ(0);
+}
+}

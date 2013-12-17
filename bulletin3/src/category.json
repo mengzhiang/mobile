@@ -1,0 +1,18 @@
+{
+	"items" : [ {
+		"name" : "促销公告",
+		"code" : "1002ZF1000000000SXOA"
+	}, {
+		"name" : "打折公告",
+		"code" : "1002ZF1000000000SXO9"
+	}, {
+		"name" : "降价公告",
+		"code" : "1002ZF100000000002CS"
+	}, {
+		"name" : "其他",
+		"code" : "1002ZF1000000000SXO8"
+	} ],
+	"name" : null,
+	"id" : null,
+	"url" : null
+}

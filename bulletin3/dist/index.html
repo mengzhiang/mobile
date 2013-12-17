@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="ui-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<title>经销商下单--公告</title>
+<!-- 
+<link rel="stylesheet" href="asserts/jquery.mobile-1.3.2.css">
+<link rel="stylesheet" href="asserts/bulletin.css?ts=1111">
+<script data-main="main" src="require.js"></script>
+ -->
+<link rel="stylesheet" href="asserts/app-min.css">
+<script src="app-min.js"></script>
+
+</head>
+<body>
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default" id="preloading"><span
+	class="ui-icon ui-icon-loading"></span>
+	<h1>loading</h1>
+</div>
+<div id="main">
+<div data-role="page" data-theme="c" id="myPage" data-dom-cache="true">
+		<div data-role="panel" id="mypanel" data-display="overlay">
+			<div data-role="header" data-theme="b">
+				<h1>公告分类</h1>
+				<a href="#categoryClose" data-icon="delete" class="ui-btn-right">close</a>
+			</div>
+			<ul data-role="listview" data-count-theme="c" data-inset="true"
+				id="J_bulletin_category">
+			</ul>
+		</div>
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<a href="#categoryOpen" data-icon="gear">分类</a>
+			<h1 id="J_bulletinTypeName" class="bulletin_title">全部公告</h1>
+		</div>
+		<div data-role="content" id="J-content">
+			<div id="scroller">
+				<ul data-role="listview" data-inset="true" id="J-bulletinList">
+				</ul>
+				<div id="J_loadMore">
+					<a data-role="button" data-corners="false" href="">更多</a>
+				</div>
+				<div data-role="controlgroup" data-type="horizontal"
+					id="J-controlgroup" class="controlgroup">
+					<a href="#" data-role="button" id="J-prev">上一页</a> <select
+						name="select-h-6a" id="J-pagebar-select"></select> <a href="#"
+						data-role="button" id="J-next">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div data-role="popup" id="J_noMore" data-theme="a">
+			<p>没有更多.
+			<p>
+		</div>
+		<div data-role="popup" id="J_invalidToken" data-theme="a">
+			<p>请求过期
+			<p>
+		</div>
+	</div>
+	<div data-role="page" data-theme="d" id="detailPage">
+		<div data-role="header" data-theme="b">
+			<a id="bulletinback" href="#" data-icon="back" class="back">返回</a>
+			<h1 id="J_bulletinTitle">公告详情</h1>
+		</div>
+		<div data-role="content">
+			<div id="J_bulletinContent" class="bulletin_content"></div>
+		</div>
+	</div>
+</div>
+<!-- Underscore Template that is used to display all of the Category Models -->
+<script id="bulletinItems" type="text/template">
+      <% _.each( collection, function( val, id ) { %>
+            <li>
+				<a href="#detail?<%=val.cbulletinid%>" class="J-bulletinItem bulletinItem" id="<%=val.cbulletinid%>">	
+					<div class="item_header" >
+						<img src="asserts/images/icon.gif" alt="France" class=""/>					
+						<h2><%=val.vtitle%></h2>
+					</div>
+					<div class="ellipsis"><p><%=val.vcontent%></p></div>
+					<span class="bulletin_date"><%=val.fromNow%></span>
+				</a>
+			</li>
+      <% }); %>
+</script>
+<script id="categoryItems" type="text/template">
+      <% _.each( collection, function( val, id ) { %>
+           <li>
+				<a href="#list?<%=val.code%>"><%=val.name%></a>
+			</li>
+      <% }); %>
+</script>
+<script id="bulletinDetail" type="text/template">
+<div class="header">
+	<h3><%=detail.vtitle%></h3>
+	<span class="detail_date"><%=detail.teffectivedate%></span>
+</div>
+<hr/>
+<p><%=detail.vcontent%></p>     
+</script>
+</body>
+</html>

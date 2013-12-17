@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="ui-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<title>经销商下单--公告</title>
+<link rel="stylesheet" href="asserts/bulletin.css">
+<script data-main="main" src="require-min.js"></script>
+</head>
+<body>
+	<div id="loading"><div class="loading_inner"></div></div>
+	<div id="listPage">
+		<div id="header">
+			<select id="category">
+				<option value="" selected="selected">全部公告</option>
+			</select> <span class="header-icon"></span>
+		</div>
+		<div id="wrapper">
+			<div id="scroller">
+				<ul id="thelist">
+				</ul>
+			</div>
+			<div id="more"><a href="#">更多</a></div>
+		</div>
+	</div>
+	<div id="detailPage" class="detailPage">
+		<div id="header">
+			<a href="#" id="back" class="back">返回</a>
+			<h1>公告详细</h1>
+		</div>
+		<div id="detail">
+			<div class="detail_header">
+				<h2 id="detail_title"></h2>
+				<span id="detail_date"></span>
+			</div>
+			<hr />
+			<p id="detail_content"></p>
+		</div>
+	</div>
+
+</body>
+</html>
